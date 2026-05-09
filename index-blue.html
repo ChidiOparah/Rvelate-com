@@ -11,11 +11,11 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --black: #1a1b1f; --white: #ffffff;
-      --gray-50: #f5f7fa; --gray-100: #e4ebf3; --gray-200: #e4ebf3;
-      --gray-400: #9ca3af; --gray-600: #4b5563; --gray-700: #374151; --gray-800: #1a1b1f;
-      --accent: #813efb; --accent-light: #9d60fc; --accent-faint: #f3eeff;
-      --gradient: linear-gradient(135deg, #1a1b1f 0%, #2d1858 60%, #1a1b1f 100%);
+      --black: #0a0a0a; --white: #ffffff;
+      --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb;
+      --gray-400: #9ca3af; --gray-600: #4b5563; --gray-800: #1f2937;
+      --accent: #2563eb; --accent-light: #3b82f6; --accent-faint: #eff6ff;
+      --gradient: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0f172a 100%);
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
@@ -46,17 +46,17 @@
     }
     .hero::before {
       content: ''; position: absolute; width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(129,62,251,0.25) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%);
       top: -150px; right: -150px; pointer-events: none;
     }
     .hero-inner { max-width: 860px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(129,62,251,0.2); border: 1px solid rgba(129,62,251,0.4);
-      color: #c4b5fd; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      background: rgba(37,99,235,0.2); border: 1px solid rgba(37,99,235,0.4);
+      color: #93c5fd; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
       text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 999px; margin-bottom: 1.75rem;
     }
-    .hero-badge::before { content: ''; width: 6px; height: 6px; background: #a78bfa; border-radius: 50%; animation: pulse 2s infinite; }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: #60a5fa; border-radius: 50%; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.5;transform:scale(1.4);} }
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
@@ -64,13 +64,13 @@
       font-weight: 700; line-height: 1.1; color: var(--white);
       letter-spacing: -1.5px; margin-bottom: 1.5rem;
     }
-    .hero h1 em { color: #c4b5fd; font-style: normal; }
+    .hero h1 em { color: #60a5fa; font-style: normal; }
     .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,0.65); max-width: 620px; margin-bottom: 2.5rem; line-height: 1.75; }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
     .btn-primary {
       background: var(--accent); color: var(--white);
       padding: 0.9rem 2rem; border-radius: 10px; font-weight: 600; font-size: 0.95rem;
-      text-decoration: none; box-shadow: 0 4px 24px rgba(129,62,251,0.45);
+      text-decoration: none; box-shadow: 0 4px 24px rgba(37,99,235,0.45);
       transition: background 0.2s, transform 0.15s;
     }
     .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
@@ -103,7 +103,7 @@
       background: var(--gradient); border-radius: 16px; padding: 2rem 2.5rem;
       position: relative; overflow: hidden;
     }
-    .problem-callout::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(129,62,251,0.35), transparent 60%); }
+    .problem-callout::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(37,99,235,0.3), transparent 60%); }
     .problem-callout-text { position: relative; z-index: 1; font-size: 1.15rem; color: rgba(255,255,255,0.9); line-height: 1.7; font-weight: 400; }
     .problem-callout-text strong { color: white; font-weight: 700; }
 
@@ -154,7 +154,7 @@
     .stars { color: #f59e0b; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 1rem; }
     .testi-text { font-size: 0.95rem; color: var(--gray-800); line-height: 1.75; flex: 1; margin-bottom: 1.5rem; }
     .testi-author { display: flex; align-items: center; gap: 0.75rem; }
-    .testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #813efb, #5c34b8); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: white; flex-shrink: 0; }
+    .testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: white; flex-shrink: 0; }
     .testi-name { font-weight: 600; font-size: 0.9rem; color: var(--black); }
     .testi-role { font-size: 0.78rem; color: var(--gray-400); margin-top: 1px; }
 
@@ -177,12 +177,12 @@
       background: var(--gradient); border-radius: 20px; padding: 2.5rem;
       color: white; position: relative; overflow: hidden;
     }
-    .about-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(129,62,251,0.35), transparent 60%); }
+    .about-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(37,99,235,0.3), transparent 60%); }
     .about-card-inner { position: relative; z-index: 1; }
     .about-avatar {
       width: 80px; height: 80px; border-radius: 50%; overflow: hidden;
       border: 3px solid rgba(255,255,255,0.2); margin-bottom: 1.25rem;
-      background: linear-gradient(135deg, #813efb, #5c34b8);
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
       display: flex; align-items: center; justify-content: center;
       font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: white;
     }
@@ -192,7 +192,7 @@
     .about-stat { display: flex; justify-content: space-between; align-items: center; padding: 0.875rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .about-stat:last-of-type { border-bottom: none; }
     .stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
-    .stat-val { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: #c4b5fd; }
+    .stat-val { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: #60a5fa; }
 
     /* NEWSLETTER */
     #newsletter { background: var(--white); }
@@ -223,7 +223,7 @@
     /* CTA */
     #cta { background: var(--gradient); padding: 100px 5%; }
     .cta-inner { max-width: 700px; margin: 0 auto; text-align: center; }
-    .cta-inner .section-label { color: #c4b5fd; }
+    .cta-inner .section-label { color: #93c5fd; }
     .cta-inner .section-title { color: white; }
     .cta-inner p { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.75; }
     .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -231,12 +231,12 @@
     .cta-dot { width: 4px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 50%; }
 
     /* FOOTER */
-    footer { background: #1a1b1f; padding: 4rem 5% 2.5rem; }
+    footer { background: #0a0a0a; padding: 4rem 5% 2.5rem; }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .footer-brand-desc { font-size: 0.85rem; color: rgba(255,255,255,0.35); line-height: 1.7; margin-top: 0.75rem; max-width: 280px; }
     .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.4rem; color: white; text-decoration: none; }
-    .footer-logo span { color: #c4b5fd; }
+    .footer-logo span { color: var(--accent-light); }
     .footer-col-title { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1.25rem; }
     .footer-col-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
     .footer-col-links a { font-size: 0.85rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
@@ -406,7 +406,7 @@
         </div>
       </div>
       <div style="text-align:center;">
-        <a href="https://rvelate.scoreapp.com" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent);color:white;font-weight:600;font-size:0.9rem;padding:0.8rem 1.75rem;border-radius:10px;text-decoration:none;box-shadow:0 4px 20px rgba(129,62,251,0.35);">Find your biggest bottleneck — Take the free 6E Diagnostic →</a>
+        <a href="https://rvelate.scoreapp.com" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent);color:white;font-weight:600;font-size:0.9rem;padding:0.8rem 1.75rem;border-radius:10px;text-decoration:none;box-shadow:0 4px 20px rgba(37,99,235,0.35);">Find your biggest bottleneck — Take the free 6E Diagnostic →</a>
       </div>
     </div>
   </section>
